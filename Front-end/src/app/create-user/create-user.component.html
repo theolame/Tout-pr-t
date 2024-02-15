@@ -1,0 +1,21 @@
+<app-nav></app-nav>
+
+<form #UserForm="ngForm" (ngSubmit)="create()">
+    <div class="group">
+        <label for="firstname"> Firstname : </label>
+        <input type="text" name="firstname" id="firstname" [formControl]="firstnameControl">
+    </div>
+    <div class="group">
+        <label for="username"> Lastname : </label>
+        <input type="text" name="lastname" id="lastname" [formControl]="lastnameControl">
+    </div>
+    <div class="group">
+        <label for="age"> Age : </label>
+        <input type="text" name="age" id="age" [formControl]="ageControl">
+    </div>
+    <div class="group">
+        <label for="password"> Password : </label>
+        <input type="password" name="password" id="password" [formControl]="passwordControl">
+    </div>
+    <button type="submit" [disabled]="!UserForm.valid" > create user</button>
+</form>

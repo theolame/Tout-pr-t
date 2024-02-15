@@ -1,0 +1,13 @@
+
+<form #loginForm="ngForm" (ngSubmit)="login()">
+    <div class="group">
+        <label for="username"> Username : </label>
+        <input type="text" name="username" id="username" [formControl]="usernameControl">
+    </div>
+    <div class="group">
+        <label for="password"> Password : </label>
+        <input type="password" name="password" id="password" [formControl]="passwordControl">
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid" > Log in</button>
+</form>
+<div *ngIf="!loginToken"> Username or password wrong</div>

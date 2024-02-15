@@ -1,1 +1,0 @@
-Hello, this is our group repository for the innovation project :)
